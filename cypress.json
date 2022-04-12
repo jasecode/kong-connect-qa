@@ -1,0 +1,6 @@
+{
+    "baseUrl": "https://konnect.konghq.com",
+    "integrationFolder" : "cypress/e2e",
+    "chromeWebSecurity": false,
+    "watchForFileChanges": false
+}

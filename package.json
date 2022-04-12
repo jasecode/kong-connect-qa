@@ -1,0 +1,19 @@
+{
+    "name": "kong-connect-qa",
+    "version": "1.0.0",
+    "description": "Kong Connect E2E Tests",
+    "main": "index.js",
+    "scripts": {
+        "test": "test",
+        "test:e2e": "cypress run",
+        "cy:local:open": "cypress open"
+    },
+    "author": "jzhang",
+    "license": "ISC",
+    "devDependencies": {
+        "@testing-library/cypress": "^8.0.2",
+        "cypress": "^9.5.3",
+        "dotenv": "^16.0.0",
+        "eslint-plugin-cypress": "^2.12.1"
+    }
+}
