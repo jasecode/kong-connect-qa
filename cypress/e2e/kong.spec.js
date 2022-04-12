@@ -20,8 +20,6 @@ describe('Authenticate and access Service Hub', () => {
     })
 
     after(() => {
-        cy.visit('https://konnect.konghq.com/servicehub')
-        cy.get(`[data-testid="${serviceName}"]`).click()
         cy.url().then(url => {
             let urlArray = url.split('/')
             let service_id = urlArray[4]
@@ -60,6 +58,10 @@ describe('Authenticate and access Service Hub', () => {
         cy.get('[data-testid="complete-stepper"][type="button"]').click()
         cy.get('.toaster-item .k-alert.success').should('be.visible')
         cy.get('[data-testid="upstream-url"]').should('contain.text', 'Upstream URL:  http://qa-automation.com Copy to clipboard')
+        
+        cy.visit('https://konnect.konghq.com/servicehub')
+        cy.get(`[data-testid="${serviceName}"]`).click()
+        cy.get('[data-testid="packageName"]').should('be.visible')
     })
 
     // Skipping due to flakiness of menu-button
