@@ -1,4 +1,4 @@
-Cypress.Commands.add('login', (username, password) => {
+Cypress.Commands.add('loginAPI', (username, password) => {
     cy.request({
         method: 'POST',
         url: 'https://konnect.konghq.com/api/auth',
